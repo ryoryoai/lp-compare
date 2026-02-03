@@ -1,0 +1,9 @@
+[
+  {
+    "id": "f7298d22ec58",
+    "title": "IPリッチ 特許侵害製品発見サービス LP",
+    "description": "株式会社IPリッチの特許侵害（被疑侵害製品）発見サービス向けLP。CVR最大化を狙う。",
+    "models": ["codex", "gemini", "opus"],
+    "date": "2026-02-03"
+  }
+]

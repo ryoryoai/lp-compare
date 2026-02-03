@@ -23,12 +23,10 @@
       background:var(--bg);
       color:var(--text);
       min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      padding:40px 20px;
+      padding:48px 20px;
     }
+    .container{max-width:800px;margin:0 auto}
+    .header{text-align:center;margin-bottom:48px}
     .logo{
       font-size:2rem;font-weight:700;
       color:var(--accent);
@@ -38,64 +36,205 @@
     .subtitle{
       font-size:.85rem;
       color:var(--text-dim);
-      margin-bottom:40px;
+      margin-bottom:16px;
     }
-    .info{
+    .models{
+      display:flex;gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .model-tag{
+      padding:5px 12px;
+      border:1px solid var(--border);
+      border-radius:20px;
+      font-size:.72rem;
+      color:var(--text-dim);
+    }
+
+    /* Entry List */
+    .section-title{
+      font-size:.75rem;font-weight:600;
+      color:var(--text-dim);
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+      padding-bottom:8px;
+      border-bottom:1px solid var(--border);
+    }
+    .entries{display:flex;flex-direction:column;gap:12px}
+    .entry{
+      display:block;
       background:var(--surface);
       border:1px solid var(--border);
       border-radius:12px;
-      padding:32px;
-      max-width:500px;
-      width:100%;
-      text-align:center;
+      padding:20px 24px;
+      transition:all .2s;
+      text-decoration:none;
+      color:inherit;
     }
-    .info h2{
-      font-size:1rem;font-weight:600;
+    .entry:hover{
+      border-color:var(--accent);
+      background:rgba(201,165,90,.04);
+      transform:translateY(-1px);
+      box-shadow:0 4px 16px rgba(0,0,0,.3);
+    }
+    .entry-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:8px;
+    }
+    .entry-title{
+      font-size:.95rem;font-weight:600;
       color:var(--text);
-      margin-bottom:12px;
+      line-height:1.4;
     }
-    .info p{
+    .entry-date{
+      font-size:.72rem;
+      color:var(--text-dim);
+      white-space:nowrap;
+      padding:4px 10px;
+      border:1px solid var(--border);
+      border-radius:6px;
+      flex-shrink:0;
+    }
+    .entry-desc{
       font-size:.82rem;
       color:var(--text-dim);
-      line-height:1.7;
+      line-height:1.6;
+      margin-bottom:10px;
     }
-    .info code{
+    .entry-models{
+      display:flex;gap:6px;flex-wrap:wrap;
+    }
+    .entry-model{
+      padding:3px 10px;
+      border-radius:4px;
+      font-size:.68rem;
+      font-weight:500;
+    }
+    .entry-model.codex{background:rgba(16,163,127,.12);color:#10a37f}
+    .entry-model.gemini{background:rgba(66,133,244,.12);color:#4285f4}
+    .entry-model.opus{background:rgba(201,165,90,.12);color:var(--accent)}
+    .entry-arrow{
+      font-size:.75rem;
+      color:var(--accent);
+      margin-top:8px;
+      display:flex;align-items:center;gap:4px;
+    }
+
+    .empty{
+      text-align:center;
+      padding:48px 24px;
+      color:var(--text-dim);
+      font-size:.85rem;
+    }
+    .empty code{
       background:rgba(201,165,90,.15);
       color:var(--accent);
       padding:2px 8px;
       border-radius:4px;
       font-size:.8rem;
     }
-    .models{
-      display:flex;gap:12px;
-      justify-content:center;
-      margin-top:24px;
-      flex-wrap:wrap;
-    }
-    .model-tag{
-      padding:6px 14px;
+
+    .how-to{
+      margin-top:48px;
+      background:var(--surface);
       border:1px solid var(--border);
-      border-radius:20px;
-      font-size:.72rem;
+      border-radius:12px;
+      padding:24px;
+      text-align:center;
+    }
+    .how-to h3{
+      font-size:.85rem;font-weight:600;
+      margin-bottom:8px;
+    }
+    .how-to p{
+      font-size:.8rem;
       color:var(--text-dim);
+      line-height:1.7;
+    }
+    .how-to code{
+      background:rgba(201,165,90,.15);
+      color:var(--accent);
+      padding:2px 8px;
+      border-radius:4px;
+      font-size:.78rem;
     }
   </style>
 </head>
 <body>
-  <div class="logo">LLM COMPARE</div>
-  <div class="subtitle">Multi-AI Model LP Comparison Viewer</div>
-  <div class="info">
-    <h2>How to use</h2>
-    <p>
-      Claude Code で <code>/llm-compare</code> を実行すると、<br>
-      LP設計プロンプトから3つのAIモデルが並列でHTMLを生成し、<br>
-      タブ切替式の比較ビューアがここにデプロイされます。
-    </p>
-    <div class="models">
-      <span class="model-tag">Codex GPT-5.2</span>
-      <span class="model-tag">Gemini 3 Pro</span>
-      <span class="model-tag">Claude Opus 4.5</span>
+  <div class="container">
+    <div class="header">
+      <div class="logo">LLM COMPARE</div>
+      <div class="subtitle">Multi-AI Model LP Comparison Viewer</div>
+      <div class="models">
+        <span class="model-tag">Codex GPT-5.2</span>
+        <span class="model-tag">Gemini 3 Pro</span>
+        <span class="model-tag">Claude Opus 4.5</span>
+      </div>
+    </div>
+
+    <div class="section-title">比較結果一覧</div>
+    <div class="entries" id="entries">
+      <div class="empty">読み込み中...</div>
+    </div>
+
+    <div class="how-to">
+      <h3>使い方</h3>
+      <p>
+        Claude Code で <code>/llm-compare</code> を実行すると、<br>
+        LP設計プロンプトから3つのAIモデルが並列でHTMLを生成し、<br>
+        タブ切替式の比較ビューアがここにデプロイされます。
+      </p>
     </div>
   </div>
+
+  <script>
+    var MODEL_LABELS = {
+      codex: 'Codex GPT-5.2',
+      gemini: 'Gemini 3 Pro',
+      opus: 'Claude Opus 4.5'
+    };
+
+    fetch('entries.json?t=' + Date.now())
+      .then(function(r){ return r.json(); })
+      .then(function(entries){
+        var container = document.getElementById('entries');
+        if (!entries || entries.length === 0) {
+          container.innerHTML = '<div class="empty">まだ比較結果がありません。<br><code>/llm-compare</code> で生成してください。</div>';
+          return;
+        }
+        // 新しい順にソート
+        entries.sort(function(a, b){ return b.date.localeCompare(a.date); });
+
+        container.innerHTML = entries.map(function(e){
+          var models = (e.models || []).map(function(m){
+            return '<span class="entry-model ' + m + '">' + (MODEL_LABELS[m] || m) + '</span>';
+          }).join('');
+
+          return '<a class="entry" href="' + e.id + '/">' +
+            '<div class="entry-top">' +
+              '<div class="entry-title">' + escapeHtml(e.title) + '</div>' +
+              '<div class="entry-date">' + e.date + '</div>' +
+            '</div>' +
+            '<div class="entry-desc">' + escapeHtml(e.description || '') + '</div>' +
+            '<div class="entry-models">' + models + '</div>' +
+            '<div class="entry-arrow">比較ビューアを開く →</div>' +
+          '</a>';
+        }).join('');
+      })
+      .catch(function(){
+        document.getElementById('entries').innerHTML =
+          '<div class="empty">まだ比較結果がありません。<br><code>/llm-compare</code> で生成してください。</div>';
+      });
+
+    function escapeHtml(s){
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  </script>
 </body>
 </html>
