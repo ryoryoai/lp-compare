@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春日部のドライヘッドスパ｜仕事帰りの頭と目の重さに、上質な個室ヘッドケア</title>
+  <meta name="description" content="春日部駅近くの完全予約制ドライヘッドスパサロン。仕事帰りの40〜50代男女に。静かな個室で受ける上質なヘッドケア。当日予約OK。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #2c2c2c;
+      --color-accent: #8b7355;
+      --color-accent-light: #a6906e;
+      --color-accent-pale: #f5f0ea;
+      --color-bg: #faf9f7;
+      --color-bg-white: #ffffff;
+      --color-text: #2c2c2c;
+      --color-text-light: #6b6b6b;
+      --color-text-muted: #999999;
+      --color-border: #e8e4de;
+      --color-gold: #c4a96a;
+      --font-serif: 'Noto Serif JP', 'Yu Mincho', serif;
+      --font-sans: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+      --max-width: 960px;
+      --section-padding: 100px 0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* ── Hero ────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 50%, #1a1a1a 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(139,115,85,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 60%, rgba(196,169,106,0.08) 0%, transparent 50%);
+    }
+
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 60px 24px;
+      max-width: 700px;
+    }
+
+    .hero__label {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--color-gold);
+      border: 1px solid rgba(196,169,106,0.4);
+      padding: 6px 20px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      color: #f0ece6;
+      line-height: 1.7;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(240,236,230,0.6);
+      line-height: 2;
+      margin-bottom: 48px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero__badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+
+    .hero__badge {
+      font-size: 0.72rem;
+      color: rgba(240,236,230,0.7);
+      border: 1px solid rgba(240,236,230,0.2);
+      padding: 6px 16px;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── CTA Buttons ────────────────────── */
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-gold);
+      color: #1a1a1a;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 16px 48px;
+      border: none;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 280px;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(240,236,230,0.7);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      padding: 10px 32px;
+      border: 1px solid rgba(240,236,230,0.25);
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(240,236,230,0.5);
+      color: rgba(240,236,230,0.9);
+    }
+
+    .cta-note {
+      font-size: 0.72rem;
+      color: rgba(240,236,230,0.4);
+      margin-top: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Common ────────────────────── */
+    .section { padding: var(--section-padding); }
+
+    .section--alt { background: var(--color-bg-white); }
+
+    .section__header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section__label {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      line-height: 1.6;
+      color: var(--color-primary);
+    }
+
+    .section__divider {
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+      margin: 24px auto 0;
+    }
+
+    /* ── Concerns Section ────────────────────── */
+    .concerns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .concern-card {
+      background: var(--color-bg-white);
+      border: 1px solid var(--color-border);
+      padding: 32px 28px;
+      position: relative;
+    }
+
+    .concern-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--color-gold), transparent);
+    }
+
+    .concern-card__text {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--color-text);
+    }
+
+    .concerns__bridge {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      line-height: 2;
+    }
+
+    /* ── Benefits Section ────────────────────── */
+    .benefits__content {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .benefits__text {
+      font-size: 0.9rem;
+      line-height: 2.2;
+      color: var(--color-text-light);
+    }
+
+    /* ── Reasons Section ────────────────────── */
+    .reasons {
+      display: grid;
+      gap: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .reason {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: start;
+    }
+
+    .reason:last-child { border-bottom: none; }
+
+    .reason__number {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--color-gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .reason__title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .reason__text {
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    /* ── Menu Section ────────────────────── */
+    .menu-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .menu-card {
+      background: var(--color-bg-white);
+      border: 1px solid var(--color-border);
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      transition: border-color 0.3s ease;
+    }
+
+    .menu-card:hover { border-color: var(--color-accent); }
+
+    .menu-card--popular {
+      border-color: var(--color-gold);
+    }
+
+    .menu-card--popular::after {
+      content: 'いちばん人気';
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-gold);
+      color: #1a1a1a;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 4px 16px;
+      letter-spacing: 0.1em;
+    }
+
+    .menu-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .menu-card__detail {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 16px;
+    }
+
+    .menu-card__price {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+
+    .menu-card__desc {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    .menu-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+    }
+
+    .menu-disclaimer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ── Flow Section ────────────────────── */
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--color-border);
+      align-items: start;
+    }
+
+    .flow-step:last-child { border-bottom: none; }
+
+    .flow-step__num {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--color-gold);
+    }
+
+    .flow-step__title {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .flow-step__text {
+      font-size: 0.82rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+
+    /* ── Testimonials Section ────────────────────── */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .testimonial {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 36px 32px;
+    }
+
+    .testimonial__text {
+      font-size: 0.85rem;
+      line-height: 2;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial__author {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── FAQ Section ────────────────────── */
+    .faq-list {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+      padding: 28px 0;
+    }
+
+    .faq-item__q {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .faq-item__q-label {
+      color: var(--color-gold);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item__a {
+      font-size: 0.82rem;
+      color: var(--color-text-light);
+      line-height: 1.9;
+      padding-left: 32px;
+    }
+
+    /* ── Access Section ────────────────────── */
+    .access-info {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .access-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .access-table tr { border-bottom: 1px solid var(--color-border); }
+
+    .access-table th {
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      padding: 16px 16px 16px 0;
+      width: 120px;
+      vertical-align: top;
+      letter-spacing: 0.04em;
+    }
+
+    .access-table td {
+      font-size: 0.85rem;
+      padding: 16px 0;
+      color: var(--color-text);
+    }
+
+    /* ── Final CTA ────────────────────── */
+    .final-cta {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 50%, #1a1a1a 100%);
+      padding: 100px 24px;
+      text-align: center;
+    }
+
+    .final-cta__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 400;
+      color: #f0ece6;
+      letter-spacing: 0.08em;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .final-cta__subtitle {
+      font-size: 0.8rem;
+      color: rgba(240,236,230,0.5);
+      margin-bottom: 40px;
+      letter-spacing: 0.04em;
+    }
+
+    .final-cta .btn-primary {
+      margin-bottom: 12px;
+    }
+
+    /* ── Sticky CTA ────────────────────── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(26,26,26,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      z-index: 100;
+      border-top: 1px solid rgba(196,169,106,0.2);
+    }
+
+    .sticky-cta .btn-primary {
+      padding: 12px 36px;
+      font-size: 0.82rem;
+      min-width: auto;
+    }
+
+    .sticky-cta__links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .sticky-cta__link {
+      font-size: 0.72rem;
+      color: rgba(240,236,230,0.6);
+      letter-spacing: 0.04em;
+      transition: color 0.3s;
+    }
+
+    .sticky-cta__link:hover { color: var(--color-gold); }
+
+    /* ── Footer ────────────────────── */
+    .footer {
+      background: #111;
+      padding: 32px 24px 100px;
+      text-align: center;
+    }
+
+    .footer__text {
+      font-size: 0.7rem;
+      color: rgba(240,236,230,0.3);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Responsive ────────────────────── */
+    @media (max-width: 768px) {
+      :root { --section-padding: 72px 0; }
+
+      .hero { min-height: 100svh; }
+      .hero__inner { padding: 48px 20px; }
+      .hero__badges { gap: 8px; }
+
+      .reason {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .reason__number {
+        font-size: 1.2rem;
+      }
+
+      .menu-cards { grid-template-columns: 1fr; }
+
+      .sticky-cta {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 16px;
+      }
+
+      .sticky-cta .btn-primary {
+        width: 100%;
+        padding: 14px;
+      }
+
+      .sticky-cta__links { display: none; }
+    }
+
+    /* ── Animations ────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ──────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero__inner">
+      <span class="hero__label">Dry Head Spa — Kasukabe</span>
+      <h1 class="hero__title">
+        仕事帰りの頭と目の重さに。<br>
+        上質なドライヘッドスパを、春日部で
+      </h1>
+      <p class="hero__subtitle">
+        静かな個室空間で受ける、完全予約制のヘッドケア。<br>
+        男女問わず通いやすく、短時間でも深い休息を目指します。
+      </p>
+      <div class="hero__badges">
+        <span class="hero__badge">完全予約制</span>
+        <span class="hero__badge">個室</span>
+        <span class="hero__badge">男女OK</span>
+        <span class="hero__badge">当日予約可</span>
+        <span class="hero__badge">キャッシュレス対応</span>
+      </div>
+      <div class="cta-group">
+        <a href="#" class="btn-primary">空き状況を見て Web予約</a>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <a href="#" class="btn-secondary">電話で予約する</a>
+          <a href="#" class="btn-secondary">LINEで相談する</a>
+        </div>
+        <p class="cta-note">当日予約も空きがあればご案内いたします</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Concerns ──────────────────────────────────── -->
+  <section class="section" id="concerns">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Your Concerns</span>
+        <h2 class="section__title">このような状態で、帰宅していませんか</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="concerns fade-in">
+        <div class="concern-card">
+          <p class="concern-card__text">夕方になると頭が重く、思考がまとまりにくい</p>
+        </div>
+        <div class="concern-card">
+          <p class="concern-card__text">目の疲れが抜けず、首や肩まで張る感じがする</p>
+        </div>
+        <div class="concern-card">
+          <p class="concern-card__text">眠りが浅く、朝のすっきり感が少ない</p>
+        </div>
+        <div class="concern-card">
+          <p class="concern-card__text">休日は寝て終わり、整える時間が足りない</p>
+        </div>
+      </div>
+      <p class="concerns__bridge fade-in">
+        ドライヘッドスパは、髪を濡らさずに受けられるため、<br>
+        仕事帰りの気分転換としても選ばれています。
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Benefits ──────────────────────────────────── -->
+  <section class="section section--alt" id="benefits">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Experience</span>
+        <h2 class="section__title">短時間でも、深く休めた感じを</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="benefits__content fade-in">
+        <p class="benefits__text">
+          頭皮を丁寧にゆるめ、こわばりやすい側頭部・後頭部・首まわりまで<br class="pc-only">
+          心地よく整えていきます。<br><br>
+          施術後は、視界が明るく感じたり、頭が軽く感じたり、<br class="pc-only">
+          呼吸がしやすくなるように感じる方もいらっしゃいます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Reasons ──────────────────────────────────── -->
+  <section class="section" id="reasons">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Why Choose Us</span>
+        <h2 class="section__title">上質さは、細部に宿ると考えています</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="reasons fade-in">
+        <div class="reason">
+          <span class="reason__number">01</span>
+          <div>
+            <h3 class="reason__title">静かな個室設計</h3>
+            <p class="reason__text">余計な音や視線が入りにくい空間で、施術に集中できる環境を整えています。</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="reason__number">02</span>
+          <div>
+            <h3 class="reason__title">最初に整える、カウンセリング</h3>
+            <p class="reason__text">その日の疲れの出方を伺い、触れる強さ・重点部位・施術配分を調整します。</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="reason__number">03</span>
+          <div>
+            <h3 class="reason__title">清潔感と所作</h3>
+            <p class="reason__text">タオルや備品、手指衛生、動線まで含めて、安心して身を預けられる状態を保ちます。</p>
+          </div>
+        </div>
+        <div class="reason">
+          <span class="reason__number">04</span>
+          <div>
+            <h3 class="reason__title">仕事帰りに通いやすい運用</h3>
+            <p class="reason__text">施術後の身支度スペース、短時間メニュー、遅い時間の受付など、通いやすさを大切にしています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Menu ──────────────────────────────────── -->
+  <section class="section section--alt" id="menu">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Menu</span>
+        <h2 class="section__title">メニュー</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="menu-cards fade-in">
+        <div class="menu-card">
+          <h3 class="menu-card__name">クイック</h3>
+          <p class="menu-card__detail">短時間で整える</p>
+          <p class="menu-card__price">¥—,———</p>
+          <p class="menu-card__desc">仕事帰りに、まずは一度。</p>
+        </div>
+        <div class="menu-card menu-card--popular">
+          <h3 class="menu-card__name">スタンダード</h3>
+          <p class="menu-card__detail">いちばん人気</p>
+          <p class="menu-card__price">¥—,———</p>
+          <p class="menu-card__desc">頭〜首まわりまでバランスよく。</p>
+        </div>
+        <div class="menu-card">
+          <h3 class="menu-card__name">ディープ</h3>
+          <p class="menu-card__detail">しっかり休む</p>
+          <p class="menu-card__price">¥—,———</p>
+          <p class="menu-card__desc">より丁寧に受けたい日に。</p>
+        </div>
+      </div>
+      <p class="menu-note fade-in">
+        初めての方は、スタンダードから選ばれる方が多いです。<br>
+        迷われた場合は、ご来店後にご相談いただけます。
+      </p>
+      <p class="menu-disclaimer">当店の施術はリラクゼーションを目的としております。</p>
+    </div>
+  </section>
+
+  <!-- ── Flow ──────────────────────────────────── -->
+  <section class="section" id="flow">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Flow</span>
+        <h2 class="section__title">施術の流れ</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="flow fade-in">
+        <div class="flow-step">
+          <div class="flow-step__num">1</div>
+          <div>
+            <h3 class="flow-step__title">ご来店・カウンセリング</h3>
+            <p class="flow-step__text">当日の状態を確認し、施術の方向性を丁寧にすり合わせます。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step__num">2</div>
+          <div>
+            <h3 class="flow-step__title">施術</h3>
+            <p class="flow-step__text">力加減は随時調整いたします。お気軽にお声がけください。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step__num">3</div>
+          <div>
+            <h3 class="flow-step__title">施術後</h3>
+            <p class="flow-step__text">お身体の状態を共有し、お会計・身支度のお時間をお取りします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Testimonials ──────────────────────────────────── -->
+  <section class="section section--alt" id="voice">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Voice</span>
+        <h2 class="section__title">お客様の声</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="testimonials fade-in">
+        <div class="testimonial">
+          <p class="testimonial__text">仕事終わりに寄れるのが助かります。静かな空間で、頭が休まる感じがありました。</p>
+          <p class="testimonial__author">— 50代 男性</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">目の疲れが強い日に選びました。施術後は気持ちがほどけて、よく眠れた気がします。</p>
+          <p class="testimonial__author">— 40代 女性</p>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__text">男性でも入りやすい雰囲気でした。強さの確認が丁寧で安心できました。</p>
+          <p class="testimonial__author">— 40代 男性</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────── -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">FAQ</span>
+        <h2 class="section__title">よくある質問</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <div class="faq-item__q">
+            <span class="faq-item__q-label">Q</span>
+            髪は濡れますか
+          </div>
+          <p class="faq-item__a">濡らしません。整髪料が多い場合は、軽く整えてからご来店ください。</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q">
+            <span class="faq-item__q-label">Q</span>
+            着替えは必要ですか
+          </div>
+          <p class="faq-item__a">基本は不要です。首まわりが締まる服の場合は、ゆとりのある服装がおすすめです。</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q">
+            <span class="faq-item__q-label">Q</span>
+            男性も利用できますか
+          </div>
+          <p class="faq-item__a">はい。男女問わずご利用いただけます。</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__q">
+            <span class="faq-item__q-label">Q</span>
+            当日予約はできますか
+          </div>
+          <p class="faq-item__a">空きがあれば可能です。Web予約で空き状況をご確認ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Access ──────────────────────────────────── -->
+  <section class="section section--alt" id="access">
+    <div class="container">
+      <div class="section__header fade-in">
+        <span class="section__label">Access</span>
+        <h2 class="section__title">アクセス</h2>
+        <div class="section__divider"></div>
+      </div>
+      <div class="access-info fade-in">
+        <table class="access-table">
+          <tr>
+            <th>最寄り駅</th>
+            <td>春日部駅より徒歩◯分</td>
+          </tr>
+          <tr>
+            <th>住所</th>
+            <td>埼玉県春日部市◯◯</td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>◯◯:◯◯ 〜 ◯◯:◯◯（最終受付 ◯◯:◯◯）</td>
+          </tr>
+          <tr>
+            <th>お支払い</th>
+            <td>現金 ／ クレジットカード ／ 電子マネー</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ──────────────────────────────────── -->
+  <section class="final-cta">
+    <h2 class="final-cta__title">
+      まずは一度、<br>
+      頭を休める時間を。
+    </h2>
+    <p class="final-cta__subtitle">ご予約はWebから簡単にお取りいただけます</p>
+    <div class="cta-group">
+      <a href="#" class="btn-primary">空き状況を見て Web予約</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="#" class="btn-secondary">電話で予約する</a>
+        <a href="#" class="btn-secondary">LINEで相談する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────── -->
+  <footer class="footer">
+    <p class="footer__text">&copy; 2026 Dry Head Spa Kasukabe. All rights reserved.</p>
+  </footer>
+
+  <!-- ── Sticky CTA ──────────────────────────────────── -->
+  <div class="sticky-cta">
+    <a href="#" class="btn-primary">空き状況を見て Web予約</a>
+    <div class="sticky-cta__links">
+      <a href="#" class="sticky-cta__link">電話予約</a>
+      <a href="#" class="sticky-cta__link">LINE相談</a>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:0.1});
+      document.querySelectorAll('.fade-in').forEach(function(el){
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
